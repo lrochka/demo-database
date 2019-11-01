@@ -1,0 +1,82 @@
+h1 {
+	color: green;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+td, th { 
+	border-bottom: 1px solid #bbb; 
+	height: 40px; 
+	padding: 5px;
+}
+
+th {
+	background-color: lightgrey;
+}
+
+tr:nth-child(odd) {
+	background-color: #f2f2f2;
+	z-index: -1;
+}
+
+tr:hover {
+  background-color: #d2e4f3;
+}
+
+td, th {
+  position: relative;
+}
+
+td:hover::after{
+  content: "";
+  position: absolute;
+  background-color: #4CAF50;
+  opacity: 0.3;
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+    }
+}
