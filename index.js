@@ -69,7 +69,7 @@ http.createServer(function(req, res){
 			      	  str += '<tr>';
 			        str += '<td>'+ data.Name+'</td>';
 			        str += '<td>'+ data.geography.Continent+'</td>';
-			        str += '<td>'+ data.IndepYear+'</td>';
+			        str += '<td>'+ data.geography.SurfaceArea+'</td>';
 			      	str += '</tr>';
 			    	console.log(data);
 		    	}
